@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SimpleController {
 
-    @Auth("테스트입니다")
+    @AccessLogging
     @GetMapping("/test1")
-    public void simpleHandler1(){
-        //do nothing
+    public String simpleHandler1(){
+        return "Called test1";
     }
 
     @GetMapping("/test2")
-    public void simpleHandler2(){
-        //do nothing
+    public String simpleHandler2(){
+        return "Called test2";
     }
 }
